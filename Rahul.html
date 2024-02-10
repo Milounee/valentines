@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine's Day Card</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+  }
+  h1 {
+    color: #ff4d4d;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+  }
+  button:hover {
+    background-color: #e60000;
+    transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Hey Rahul!</h1>
+  <p>You are an absolute ass.</p>
+  <p>But I love you, Will you be my Valentine?</p>
+  <button id="yesBtn">Yes</button>
+  <button id="noBtn">No</button>
+</div>
+
+<script>
+  var yesBtn = document.getElementById("yesBtn");
+  var noBtn = document.getElementById("noBtn");
+
+  yesBtn.addEventListener("click", function() {
+    yesBtn.style.fontSize = parseInt(window.getComputedStyle(yesBtn).fontSize) + 4 + "px";
+    alert("Really option nathi tha tumhare paas💖");
+  });
+
+  noBtn.addEventListener("click", function() {
+    noBtn.style.width = parseInt(window.getComputedStyle(noBtn).width) - 20 + "px";
+    noBtn.style.height = parseInt(window.getComputedStyle(noBtn).height) - 5 + "px";
+
+    var prompts = [
+      "Excuse me???!!!",
+      "SO FUCKING MEAN YOU TINY BITCH",
+      "I really don't care about consent.",
+      "Rude, this is why I said you're an ass.",
+      "Yeh pehle sochna tha na?"
+    ];
+
+    var randomIndex = Math.floor(Math.random() * prompts.length);
+    alert(prompts[randomIndex]);
+  });
+</script>
+
+</body>
+</html>
